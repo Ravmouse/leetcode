@@ -10,7 +10,7 @@ import static ru.vitaly._206_ReverseLinkedList.reverseList;
  */
 public class _206_ReverseLinkedListTest {
     @Test
-    public void testOne() {
+    public void test1() {
         ListNode l4 = new ListNode(5);
         ListNode l3 = new ListNode(4, l4);
         ListNode l2 = new ListNode(3, l3);
@@ -27,7 +27,7 @@ public class _206_ReverseLinkedListTest {
     }
 
     @Test
-    public void testTwo() {
+    public void test2() {
         ListNode l1 = new ListNode(2);
         ListNode head = new ListNode(1, l1);
 

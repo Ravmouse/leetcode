@@ -8,9 +8,10 @@ import java.util.Objects;
  */
 public class _206_ReverseLinkedList {
     public static ListNode reverseList(ListNode head) {
+        ListNode next;
         ListNode prev = null;
         while (head != null) {
-            ListNode next = head.next;
+            next = head.next;
             head.next = prev;
             prev = head;
             head = next;
