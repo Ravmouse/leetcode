@@ -1,13 +1,15 @@
 package ru.vitaly;
 
 import org.junit.Test;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
 import static ru.vitaly._21_MergeTwoSortedLists.mergeTwoLists;
 
 /**
  * @author Vitaly Vasilyev, e-mail: rav.energ@rambler.ru
  * @version 1.0
- * @since 07.01.2022
+ * @since 19.01.2022
  */
 public class _21_MergeTwoSortedListsTest {
     @Test
@@ -26,7 +28,7 @@ public class _21_MergeTwoSortedListsTest {
         ListNode r3 = new ListNode(2, r4);
         ListNode r2 = new ListNode(1, r3);
         ListNode r1 = new ListNode(1, r2);
-        assertEquals(mergeTwoLists(l1, l4), r1);
+        assertThat(mergeTwoLists(l1, l4), is(r1));
     }
 
     @Test
