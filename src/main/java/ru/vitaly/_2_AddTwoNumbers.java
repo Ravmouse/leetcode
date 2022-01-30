@@ -3,7 +3,7 @@ package ru.vitaly;
 /**
  * @author Vitaly Vasilyev, e-mail: rav.energ@rambler.ru
  * @version 1.0
- * @since 24.01.2022
+ * @since 30.01.2022
  */
 public class _2_AddTwoNumbers {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -37,12 +37,8 @@ public class _2_AddTwoNumbers {
     }
 
     public static int sum(ListNode cur, int v1, int v2) {
-        cur.val = v1 + v2 + cur.val;
-        if (cur.val > 9) {
-            cur.val = cur.val % 10;
-            return  1;
-        } else {
-            return  0;
-        }
+        int tmp = v1 + v2 + cur.val;
+        cur.val = tmp % 10;
+        return tmp / 10;
     }
 }
