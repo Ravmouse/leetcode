@@ -9,9 +9,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static ru.vitaly._15_3Sum.threeSum;
 
 /**
- * @author Vitaly Vasilyev, date: 14.11.2021, e-mail: rav.energ@rambler.ru
+ * @author Vitaly Vasilyev, e-mail: rav.energ@rambler.ru
  * @version 1.0
- * @since 14.11.2021
+ * @since 01.02.2022
  */
 public class _15_3SumTest {
     @Test
@@ -63,5 +63,20 @@ public class _15_3SumTest {
     @Test
     public void test8() {
         assertThat(threeSum(new int[] {1,0,-4}), is(Collections.emptyList()));
+    }
+
+    @Test
+    public void test9() {
+        List<List<Integer>> list = new ArrayList<>();
+        list.add(List.of(-4,0,4));
+        list.add(List.of(-4,1,3));
+        list.add(List.of(-3,-1,4));
+        list.add(List.of(-3,0,3));
+        list.add(List.of(-3,1,2));
+        list.add(List.of(-2,-1,3));
+        list.add(List.of(-2,0,2));
+        list.add(List.of(-1,-1,2));
+        list.add(List.of(-1,0,1));
+        assertThat(threeSum(new int[] {-1,0,1,2,-1,-4,-2,-3,3,0,4}), is(list));
     }
 }
