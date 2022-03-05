@@ -79,4 +79,16 @@ public class _15_3SumTest {
         list.add(List.of(-1,0,1));
         assertThat(threeSum(new int[] {-1,0,1,2,-1,-4,-2,-3,3,0,4}), is(list));
     }
+
+    @Test
+    public void test10() {
+        List<List<Integer>> list = new ArrayList<>();
+        list.add(List.of(-4,-2,6));
+        list.add(List.of(-4,0,4));
+        list.add(List.of(-4,1,3));
+        list.add(List.of(-4,2,2));
+        list.add(List.of(-2,-2,4));
+        list.add(List.of(-2,0,2));
+        assertThat(threeSum(new int[] {-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6}), is(list));
+    }
 }
